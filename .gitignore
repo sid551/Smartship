@@ -21,8 +21,7 @@ build
 *.mp4
 *.mov
 *.avi
-/public/BgVideo.mp4
-/public/*.mp4
+
 
 # Editor directories and files
 .vscode/*
