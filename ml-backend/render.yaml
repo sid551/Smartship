@@ -2,9 +2,8 @@ services:
   - type: web
     name: smartship-ml-api
     env: python
+    pythonVersion: 3.10.0   # Specify Python version here
     plan: free
-    buildCommand: |
-      pip install --upgrade pip setuptools wheel
-      pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip setuptools wheel && pip install -r requirements.txt
     startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
     healthCheckPath: /health

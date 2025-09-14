@@ -1,9 +1,19 @@
+# Upgrade build tools first
 pip>=23.2
 setuptools>=68.0
 wheel>=0.40
+
+# Flask API
 Flask==2.3.3
 Flask-CORS==4.0.0
+
+# ML packages
 numpy==1.24.3
 scikit-learn==1.3.0
+
+# For loading .pkl models
+# (Optional, can be removed if using Python's built-in pickle)
 pickle-mixin==1.0.2
+
+# Web server
 gunicorn==21.2.0
