@@ -1,14 +1,19 @@
 {
-  "name": "backend",
+  "name": "smartship-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["smartship", "shipping", "news", "api"],
+  "author": "SmartShip Team",
+  "license": "MIT",
+  "description": "SmartShip News API Backend",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "axios": "^1.10.0",
     "cors": "^2.8.5",
@@ -17,6 +22,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  },
-  "description": ""
+  }
 }

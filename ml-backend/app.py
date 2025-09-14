@@ -51,5 +51,19 @@ def predict():
         return jsonify({"error": str(e)}), 400
 
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "message": "SmartShip ML Prediction API is running!",
+        "version": "1.0.0",
+        "endpoints": ["/predict"]
+    })
+
+@app.route("/health", methods=["GET"])
+def health():
+    return jsonify({"status": "healthy", "service": "ml-backend"})
+
 if __name__ == "__main__":
-    app.run(port=5001, debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5001))
+    app.run(host="0.0.0.0", port=port, debug=False)

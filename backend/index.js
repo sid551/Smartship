@@ -6,11 +6,13 @@ require("dotenv").config();
 const app = express();
 app.use(cors());
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.get("/api/news", async (req, res) => {
   try {
-    const response = await axios.get(`https://gnews.io/api/v4/search?q=shipping&lang=en&apikey=${process.env.GNEWS_API_KEY}`);
+    const response = await axios.get(
+      `https://gnews.io/api/v4/search?q=shipping&lang=en&apikey=${process.env.GNEWS_API_KEY}`
+    );
     res.json(response.data);
   } catch (error) {
     console.error("Error fetching news:", error.message);
@@ -18,6 +20,14 @@ app.get("/api/news", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.json({
+    message: "SmartShip News API is running!",
+    version: "1.0.0",
+    endpoints: ["/api/news"],
+  });
+});
+
 app.listen(PORT, () => {
-  console.log(`Backend server running on http://localhost:${PORT}`);
+  console.log(`SmartShip Backend server running on port ${PORT}`);
 });

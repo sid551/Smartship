@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: smartship-news-api
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GNEWS_API_KEY
+        sync: false
+    healthCheckPath: /

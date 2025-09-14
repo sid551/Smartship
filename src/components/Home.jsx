@@ -209,11 +209,14 @@ function Home() {
     };
 
     try {
-      const res = await fetch("http://localhost:5001/predict", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_ML_API_URL || "http://localhost:5001"}/predict`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
 
       const result = await res.json();
       navigate("/result", {
@@ -316,9 +319,10 @@ function Home() {
               />
             </div>
           </div>
-          
-            <button id="predict" type="submit">Predict Delay</button>
-          
+
+          <button id="predict" type="submit">
+            Predict Delay
+          </button>
         </form>
       </div>
     </div>

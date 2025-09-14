@@ -9,7 +9,11 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/news");
+        const response = await axios.get(
+          `${
+            import.meta.env.VITE_NEWS_API_URL || "http://localhost:5000"
+          }/api/news`
+        );
         setArticles(response.data.articles);
       } catch (error) {
         console.error("Error fetching news:", error);
@@ -36,7 +40,11 @@ const News = () => {
         {articles.map((article, index) => (
           <div className="news-card" key={index}>
             {article.image && (
-              <img src={article.image} alt={article.title} className="news-image" />
+              <img
+                src={article.image}
+                alt={article.title}
+                className="news-image"
+              />
             )}
             <div className="news-details">
               <h3 className="news-title">{article.title}</h3>
