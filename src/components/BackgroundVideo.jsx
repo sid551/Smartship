@@ -5,7 +5,13 @@ import "../styles/BackgroundVideo.css";
 function BackgroundVideo() {
   return (
     <video className="bg-video" autoPlay loop muted playsInline>
-      <source src="/BgVideo.mp4" type="video/mp4" />
+      <source
+        src={
+          import.meta.env.VITE_BACKGROUND_VIDEO_URL ||
+          "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        }
+        type="video/mp4"
+      />
       Your browser does not support the video tag.
     </video>
   );
