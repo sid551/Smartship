@@ -1,0 +1,468 @@
+/* Enhanced Responsive Footer Styles */
+.custom-footer {
+  width: 100vw;
+  background-color: #111;
+  color: #ccc;
+  padding: 40px 20px 20px;
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+  overflow-x: hidden;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-branding {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-branding h2 {
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-branding p {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 120px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  padding: 2px 0;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  flex: 1;
+  min-width: 150px;
+  justify-content: flex-start;
+}
+
+.footer-social a {
+  color: #ccc;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  min-height: 36px;
+}
+
+.footer-social a:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  border-top: 1px solid #222;
+  padding-top: 15px;
+  width: 100%;
+}
+/* Comprehensive Responsive Design for All Device Types */
+
+/* Large desktops and wide screens */
+@media (min-width: 1400px) {
+  .custom-footer {
+    padding: 50px 40px 25px;
+  }
+
+  .footer-inner {
+    max-width: 1400px;
+    gap: 40px;
+  }
+
+  .footer-branding h2 {
+    font-size: 28px;
+  }
+
+  .footer-branding p {
+    font-size: 16px;
+  }
+
+  .footer-links a {
+    font-size: 16px;
+  }
+
+  .footer-social a {
+    font-size: 24px;
+  }
+}
+
+/* Standard desktops */
+@media (max-width: 1399px) and (min-width: 1200px) {
+  .custom-footer {
+    padding: 45px 30px 22px;
+  }
+
+  .footer-inner {
+    gap: 35px;
+  }
+}
+
+/* Large tablets and small laptops (iPad Pro, Surface Pro) */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .custom-footer {
+    padding: 40px 25px 20px;
+  }
+
+  .footer-inner {
+    gap: 30px;
+  }
+
+  .footer-branding h2 {
+    font-size: 22px;
+  }
+
+  .footer-social {
+    gap: 12px;
+  }
+}
+
+/* Standard tablets (iPad, Android tablets) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .custom-footer {
+    padding: 35px 20px 18px;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 25px;
+  }
+
+  .footer-branding {
+    flex: 2;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex: 1;
+    align-items: center;
+  }
+
+  .footer-social {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .footer-branding h2 {
+    font-size: 20px;
+  }
+
+  .footer-branding p {
+    font-size: 13px;
+  }
+}
+
+/* Small tablets and large phones (iPad Mini, large Android phones) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .custom-footer {
+    padding: 30px 15px 15px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-branding {
+    width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 20px;
+    width: 100%;
+  }
+
+  .footer-social {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .footer-branding h2 {
+    font-size: 18px;
+  }
+
+  .footer-branding p {
+    font-size: 12px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-social a {
+    font-size: 18px;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    font-size: 11px;
+  }
+}
+
+/* Standard smartphones and flip phones */
+@media (max-width: 480px) and (min-width: 321px) {
+  .custom-footer {
+    padding: 25px 12px 12px;
+  }
+
+  .footer-inner {
+    gap: 15px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footer-social {
+    gap: 10px;
+  }
+
+  .footer-branding h2 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .footer-branding p {
+    font-size: 11px;
+  }
+
+  .footer-links a {
+    font-size: 12px;
+    padding: 4px 0;
+  }
+
+  .footer-social a {
+    font-size: 16px;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 6px;
+  }
+
+  .footer-bottom {
+    margin-top: 15px;
+    font-size: 10px;
+    padding-top: 12px;
+  }
+}
+
+/* Very small devices (old smartphones, feature phones) */
+@media (max-width: 320px) {
+  .custom-footer {
+    padding: 20px 8px 10px;
+  }
+
+  .footer-inner {
+    gap: 12px;
+  }
+
+  .footer-branding h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+
+  .footer-branding p {
+    font-size: 10px;
+  }
+
+  .footer-links a {
+    font-size: 11px;
+    padding: 3px 0;
+  }
+
+  .footer-social {
+    gap: 8px;
+  }
+
+  .footer-social a {
+    font-size: 14px;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 4px;
+  }
+
+  .footer-bottom {
+    margin-top: 12px;
+    font-size: 9px;
+    padding-top: 10px;
+  }
+}
+
+/* Ultra-small devices (foldable phones folded) */
+@media (max-width: 280px) {
+  .custom-footer {
+    padding: 15px 6px 8px;
+  }
+
+  .footer-inner {
+    gap: 10px;
+  }
+
+  .footer-branding h2 {
+    font-size: 12px;
+    margin-bottom: 3px;
+  }
+
+  .footer-branding p {
+    font-size: 9px;
+  }
+
+  .footer-links a {
+    font-size: 10px;
+    padding: 2px 0;
+  }
+
+  .footer-social {
+    gap: 6px;
+  }
+
+  .footer-social a {
+    font-size: 12px;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 3px;
+  }
+
+  .footer-bottom {
+    margin-top: 10px;
+    font-size: 8px;
+    padding-top: 8px;
+  }
+}
+
+/* Landscape orientation for phones and small tablets */
+@media (max-height: 500px) and (orientation: landscape) {
+  .custom-footer {
+    padding: 15px 20px 10px;
+  }
+
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+  }
+
+  .footer-branding {
+    text-align: left;
+  }
+
+  .footer-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    margin-top: 10px;
+    padding-top: 8px;
+  }
+}
+
+/* High DPI displays (Retina, etc.) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .footer-social a {
+    border-radius: 3px;
+  }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  .footer-social a {
+    min-width: 44px;
+    min-height: 44px;
+    padding: 10px;
+  }
+
+  .footer-links a {
+    padding: 8px 4px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Accessibility enhancements */
+.footer-social a:focus,
+.footer-links a:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  outline-offset: 2px;
+}
+
+.footer-social a:focus:not(:focus-visible),
+.footer-links a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Animation preferences */
+@media (prefers-reduced-motion: reduce) {
+  .footer-social a,
+  .footer-links a {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .custom-footer {
+    background-color: transparent !important;
+    color: black !important;
+    padding: 20px 0;
+  }
+
+  .footer-branding h2 {
+    color: black !important;
+  }
+
+  .footer-links a,
+  .footer-social a {
+    color: black !important;
+  }
+
+  .footer-social {
+    display: none;
+  }
+}

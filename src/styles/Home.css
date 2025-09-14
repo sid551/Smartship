@@ -1,0 +1,477 @@
+/* General form layout - Enhanced Responsive */
+.form-card {
+  max-width: 750px;
+  margin: auto;
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  font-family: "Segoe UI", sans-serif;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #3f51b5;
+  line-height: 1.2;
+}
+
+.form-card p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-row > div {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+label {
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Improved input and select styles */
+input[type="number"],
+input[type="date"],
+select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+  background: #fafafa;
+  color: black;
+}
+
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  outline: none;
+  border-color: #3f51b5;
+  box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+}
+
+/* Button */
+button[type="submit"] {
+  padding: 12px 0;
+  background: linear-gradient(90deg, #3f51b5, #5c6bc0);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #3644a8, #4f5bb8);
+}
+/* Comprehensive Responsive Design for Home Page */
+
+/* Large tablets and small laptops */
+@media (max-width: 1024px) {
+  .form-card {
+    max-width: 90%;
+    padding: 2rem;
+  }
+
+  .form-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .form-row > div {
+    flex: 1 1 48%;
+  }
+}
+
+/* Standard tablets */
+@media (max-width: 768px) {
+  .form-card {
+    max-width: 95%;
+    padding: 1.8rem;
+    margin: 1rem auto;
+  }
+
+  .form-card h1 {
+    font-size: 1.6rem;
+  }
+
+  .form-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row {
+    gap: 1.2rem;
+  }
+
+  .form-row > div {
+    flex: 1 1 100%;
+  }
+
+  form {
+    gap: 1rem;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  button[type="submit"] {
+    padding: 14px 0;
+    font-size: 1.1rem;
+  }
+}
+
+/* Large phones and small tablets */
+@media (max-width: 600px) {
+  .form-card {
+    max-width: 98%;
+    padding: 1.5rem;
+    margin: 0.5rem auto;
+    border-radius: 8px;
+  }
+
+  .form-card h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-card p {
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .form-row {
+    gap: 1rem;
+  }
+
+  form {
+    gap: 0.8rem;
+  }
+
+  label {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 12px 10px;
+    font-size: 0.95rem;
+  }
+
+  button[type="submit"] {
+    padding: 14px 0;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
+
+/* Standard smartphones */
+@media (max-width: 480px) {
+  .form-card {
+    max-width: 100%;
+    padding: 1.2rem;
+    margin: 0.25rem auto;
+    border-radius: 6px;
+  }
+
+  .form-card h1 {
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .form-card p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-row {
+    gap: 0.8rem;
+  }
+
+  form {
+    gap: 0.7rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 11px 8px;
+    font-size: 0.9rem;
+    border-radius: 4px;
+  }
+
+  button[type="submit"] {
+    padding: 12px 0;
+    font-size: 0.95rem;
+    border-radius: 6px;
+  }
+}
+
+/* Small smartphones */
+@media (max-width: 400px) {
+  .form-card {
+    padding: 1rem;
+    margin: 0.1rem auto;
+  }
+
+  .form-card h1 {
+    font-size: 1.3rem;
+  }
+
+  .form-card p {
+    font-size: 0.8rem;
+  }
+
+  .form-row {
+    gap: 0.6rem;
+  }
+
+  form {
+    gap: 0.6rem;
+  }
+
+  label {
+    font-size: 0.85rem;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 10px 6px;
+    font-size: 0.85rem;
+  }
+
+  button[type="submit"] {
+    padding: 11px 0;
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 320px) {
+  .form-card {
+    padding: 0.8rem;
+    margin: 0;
+    border-radius: 4px;
+  }
+
+  .form-card h1 {
+    font-size: 1.2rem;
+  }
+
+  .form-card p {
+    font-size: 0.75rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .form-row {
+    gap: 0.5rem;
+  }
+
+  form {
+    gap: 0.5rem;
+  }
+
+  label {
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 9px 5px;
+    font-size: 0.8rem;
+  }
+
+  button[type="submit"] {
+    padding: 10px 0;
+    font-size: 0.85rem;
+  }
+}
+
+/* Ultra-small devices (foldable phones) */
+@media (max-width: 280px) {
+  .form-card {
+    padding: 0.6rem;
+  }
+
+  .form-card h1 {
+    font-size: 1.1rem;
+  }
+
+  .form-card p {
+    font-size: 0.7rem;
+  }
+
+  label {
+    font-size: 0.75rem;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select {
+    padding: 8px 4px;
+    font-size: 0.75rem;
+  }
+
+  button[type="submit"] {
+    padding: 9px 0;
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape orientation for phones */
+@media (max-height: 500px) and (orientation: landscape) {
+  .form-card {
+    padding: 1rem;
+    margin: 0.5rem auto;
+  }
+
+  .form-card h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .form-card p {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+
+  form {
+    gap: 0.6rem;
+  }
+
+  .form-row {
+    gap: 0.8rem;
+  }
+
+  .form-row > div {
+    flex: 1 1 48%;
+  }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  input[type="number"],
+  input[type="date"],
+  select {
+    min-height: 44px;
+    padding: 12px;
+  }
+
+  button[type="submit"] {
+    min-height: 48px;
+    padding: 14px 0;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .form-card {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  input[type="number"],
+  input[type="date"],
+  select,
+  button[type="submit"] {
+    transition: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .form-card {
+    background: #2d2d2d;
+    color: #fff;
+  }
+
+  .form-card h1 {
+    color: #7986cb;
+  }
+
+  .form-card p {
+    color: #ccc;
+  }
+
+  label {
+    color: #ddd;
+  }
+
+  input[type="number"],
+  input[type="date"],
+  select {
+    background: #404040;
+    border-color: #555;
+    color: #fff;
+  }
+
+  input[type="number"]:focus,
+  input[type="date"]:focus,
+  select:focus {
+    border-color: #7986cb;
+    box-shadow: 0 0 0 2px rgba(121, 134, 203, 0.2);
+  }
+}
+
+/* Container responsiveness */
+.home-container {
+  width: 100%;
+  max-width: 100vw;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Ensure form elements don't overflow */
+* {
+  box-sizing: border-box;
+}
+
+input,
+select,
+button {
+  max-width: 100%;
+  width: 100%;
+}

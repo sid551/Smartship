@@ -1,0 +1,221 @@
+.result-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.result-box {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 750px;
+  text-align: center;
+}
+
+.result-box h2 {
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+  font-size: 1.8rem;
+}
+
+.result-item {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.label {
+  font-weight: bold;
+  color: #555;
+}
+
+.value {
+  color: #222;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.6rem 1.4rem;
+  background: #3f51b5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #2c3e9c;
+}
+
+.map-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.map-container h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.map-box {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* This assumes MapView renders Leaflet map with .leaflet-container */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.map-container p {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .result-box {
+    padding: 1.5rem 1.2rem;
+  }
+
+  .map-box {
+    height: 240px;
+  }
+
+  .map-container p {
+    font-size: 0.9rem;
+  }
+}
+/* Export Buttons Styles for Result Page */
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.result-header h2 {
+  margin-bottom: 0;
+  flex: 1;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.export-btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 0;
+}
+
+.export-btn:hover {
+  transform: translateY(-2px);
+}
+
+.pdf-btn {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  border: 1px solid rgba(231, 76, 60, 0.3);
+}
+
+.pdf-btn:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+}
+
+.excel-btn {
+  background: linear-gradient(135deg, #27ae60, #229954);
+  color: white;
+  border: 1px solid rgba(39, 174, 96, 0.3);
+}
+
+.excel-btn:hover {
+  background: linear-gradient(135deg, #229954, #1e8449);
+  box-shadow: 0 6px 20px rgba(39, 174, 96, 0.4);
+}
+
+.export-btn:active {
+  transform: translateY(0);
+}
+
+.back-button {
+  background: #6c757d;
+  margin-top: 2rem;
+}
+
+.back-button:hover {
+  background: #5a6268;
+}
+
+/* Responsive Export Buttons for Result Page */
+@media (max-width: 768px) {
+  .result-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .result-header h2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .export-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .export-btn {
+    flex: 1;
+    justify-content: center;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .export-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .export-btn {
+    width: 100%;
+    padding: 12px 16px;
+  }
+
+  .result-box {
+    padding: 1.5rem 1rem;
+  }
+}

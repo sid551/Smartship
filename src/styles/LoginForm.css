@@ -1,0 +1,97 @@
+/* src/styles/LoginForm.css */
+.login-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1e1e1e;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.login-form h2 {
+  margin-bottom: 0.25rem;
+  color: black;
+}
+
+.login-form p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.login-form input {
+  width: 93%;
+  padding: 10px;
+  color: black;
+  margin-bottom: 1rem;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px; /* increased height */
+  font-size: 1.05rem; /* slightly larger text */
+  font-weight: bold;
+  background: linear-gradient(90deg, #3f51b5, #5c6bc0); /* Indigo Modern */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 8px;
+}
+
+.login-form button:hover {
+  background: linear-gradient(90deg, #3642a0, #4b58b1);
+  transform: scale(1.02); /* subtle zoom on hover */
+}
+
+
+.signup-link {
+  color: #ff3f3f;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.password-input-wrapper {
+  position: relative; /* This makes the icon stay inside */
+  width: 100%;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* leave space for the icon */
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 35%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: black;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+

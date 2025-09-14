@@ -1,0 +1,75 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Add in index.css or App.css if not already present */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-control-zoom,
+.leaflet-control-geocoder{
+  z-index: 1000 !important;
+}
+
+.leaflet-control-fullscreen {
+  bottom: 10px !important;
+  top: auto !important;
+  right: 10px !important;
+  left: auto !important;
+  z-index: 1000;
+}
+
+/* Ensure Leaflet control container has enough room */
+.leaflet-control-container {
+  position: relative;
+  z-index: 500;
+}
+
+/* Move zoom controls slightly down to make space */
+.leaflet-top.leaflet-right {
+  top: 50px; /* move zoom down slightly */
+}
+
+/* Force fullscreen control to bottom-right */
+.leaflet-control-fullscreen {
+  top: auto !important;
+  bottom: 10px !important;
+  right: 10px !important;
+  left: auto !important;
+  z-index: 1000 !important; /* above zoom */
+}
+
+/* Optional: space between buttons if still overlapping */
+
+
+/* Move zoom controls to bottom-left */
+.leaflet-top.leaflet-left {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+/* Optional: increase spacing between controls */
+.leaflet-control {
+  margin-bottom: 8px;
+}
+
+/* Ensure map is below navbar (z-index fix) */
+.leaflet-container {
+  z-index: 0;
+}
