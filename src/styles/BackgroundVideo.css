@@ -5,6 +5,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* ✅ pushes it to the back */
+  z-index: -10; /* ✅ Ensure it's behind everything but visible */
   object-fit: cover;
+  opacity: 1; /* ✅ Ensure it's always visible */
+  pointer-events: none; /* ✅ Prevent interaction issues */
+}
+
+/* ✅ Ensure video is visible in all color schemes */
+@media (prefers-color-scheme: dark) {
+  .bg-video {
+    opacity: 1;
+    z-index: -10;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .bg-video {
+    opacity: 1;
+    z-index: -10;
+  }
 }
