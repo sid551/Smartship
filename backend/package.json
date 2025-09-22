@@ -12,13 +12,13 @@
   "license": "MIT",
   "description": "SmartShip News API Backend",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   },
   "dependencies": {
     "axios": "^1.10.0",
     "cors": "^2.8.5",
-    "dotenv": "^17.0.1",
-    "express": "^5.1.0"
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
