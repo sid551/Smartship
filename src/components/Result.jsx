@@ -144,7 +144,9 @@ function Result() {
       mainData.push(["Status:", result.prediction]);
       mainData.push([
         "Probability of Delay:",
-        `${(result.probability * 100).toFixed(2)}%`,
+        result.probability !== undefined && result.probability !== null
+          ? `${(result.probability * 100).toFixed(2)}%`
+          : "N/A",
       ]);
       mainData.push([
         "Confidence Level:",
@@ -292,7 +294,9 @@ function Result() {
         <div className="result-item">
           <span className="label">Probability of Delay:</span>
           <span className="value">
-            {(result.probability * 100).toFixed(2)}%
+            {result.probability !== undefined && result.probability !== null
+              ? `${(result.probability * 100).toFixed(2)}%`
+              : "N/A"}
           </span>
         </div>
 
