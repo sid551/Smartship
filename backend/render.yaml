@@ -8,6 +8,3 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-      - key: GNEWS_API_KEY
-        sync: false
-    healthCheckPath: /
