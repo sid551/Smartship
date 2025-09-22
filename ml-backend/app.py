@@ -8,12 +8,23 @@ app = Flask(__name__)
 CORS(app)  # ✅ Enable CORS for all domains (or configure per origin if needed)
 
 # Load the trained model
-with open("smartship_model.pkl", "rb") as f:
-    model = pickle.load(f)
+try:
+    with open("smartship_model.pkl", "rb") as f:
+        model = pickle.load(f)
+    print("Model loaded successfully!")
+except Exception as e:
+    print(f"Error loading model: {e}")
+    model = None
 
 # Prediction endpoint
 @app.route("/predict", methods=["POST"])
 def predict():
+    if model is None:
+        return jsonify({
+            "error": "Model not available",
+            "message": "ML model failed to load"
+        }), 500
+    
     data = request.json
 
     try:
