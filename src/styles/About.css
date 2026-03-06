@@ -620,9 +620,7 @@
 
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
-  .about-page {
-    
-  }
+
 
   .about-container {
     background-color: #2d2d2d;
