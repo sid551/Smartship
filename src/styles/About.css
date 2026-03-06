@@ -156,8 +156,7 @@
   margin-bottom: 4px;
   font-weight: 600;
 }
-  color: black;
-}
+
 
 .review-email {
   font-size: 0.8rem;
@@ -622,7 +621,7 @@
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .about-page {
-    background-color: #1a1a1a;
+    
   }
 
   .about-container {
